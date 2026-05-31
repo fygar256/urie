@@ -6,13 +6,15 @@ slide: false
 ---
 A Thought Experiment on Turing Completeness
 
-Since Brainfuck's structured loops are difficult to conceive of, I created a fake language 'urie' that replaces them with relative jumps.
+Since Brainfuck's structured loops are difficult to implement, I created a fake language called 'urie' that replaces them with relative jumps.
 
-It only has 7 instructions. It's even lower level than Brainfuck. Is "low level" an insult?
+It only has 7 instructions. It's even lower level than Brainfuck. Is "low-level" an insult?
 
-Compared to Brainfuck's 8 instructions, it has one less instruction, making it the world's fewest and lowest-level Esoteric Language.
+It has one fewer instruction than Brainfuck's 8.
 
-It's similar to Brainf*ck, but the way loops and branching are done is fundamentally different. (However, as will be explained later, transpiling from Brainf\*ck is relatively easy.)
+OISC is Turing complete with a single instruction, but it takes three operands. While urie also takes one operand for its '#' instruction, Brainfuck is probably the world's smallest Turing complete language, including I/O, that doesn't have operands.
+
+urie is similar to Brainfuck, but its looping and branching methods are fundamentally different. (However, as I'll explain later, transpiling from Brainfuck is relatively easy.)
 
 The language specification is as follows:
 
