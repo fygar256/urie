@@ -101,3 +101,20 @@ Case B: At the end of the loop, if the data is not 0 (return to the beginning of
 Using this transpilation technique, all existing Brainfuck programs can be uniquely converted into perfectly equivalent urie programs without causing data cell misalignment or zero cell corruption. Therefore, computationally, since Brainfuck is Turing complete (assuming an infinite memory tape), it is proven that the urie that has a one-to-one correspondence with it is also strictly Turing complete.
 
 ----------------End of Gemini
+
+Usage of the programs:
+
+```
+Brainfuck to urie conversion(transpile)
+
+％ bf2urie.py mandelbrot.bf andelbrot.uri
+
+Urie interpretation
+
+% urie.py mandelbrot.uri
+
+Urie compilation
+
+% uriecomp.py mandelbrot.uri
+
+the executable is for FreeBSD. it can be applied to linux with changing system call number in uriecomp.py for linux.
