@@ -107,7 +107,7 @@ Usage of the programs:
 ```
 Brainfuck to urie conversion(transpile)
 
-％ bf2urie.py mandelbrot.bf andelbrot.uri
+％ bf2urie.py mandelbrot.bf mandelbrot.uri
 
 Urie interpretation
 
@@ -118,3 +118,5 @@ Urie compilation
 % uriecomp.py mandelbrot.uri
 
 the executable is for FreeBSD. it can be applied to linux with changing system call number in uriecomp.py for linux.
+
+mandelbrot.bf can be any bf code.
