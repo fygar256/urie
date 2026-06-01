@@ -35,8 +35,6 @@ The '-' used here has a different meaning than the '-' in command words.
 
 Prove whether urie is Turing complete.
 
-Gemini: ----------------
-
 Here, based on a theoretical computer science approach, we will perform a constructive proof showing that "any Brainfuck program can be mechanically converted to urie (7 instructions) while completely preserving its meaning." Since Brainfuck has been proven to be Turing complete, the existence of this conversion algorithm rigorously proves that urie is also Turing complete. The biggest challenges, the "pointer shift problem" and the "always tracking zero cell problem," can be perfectly solved by introducing an interleaved memory model.
 
 Exact Proof of Turing Completeness of urie
@@ -47,7 +45,9 @@ Brainfuck memory: T[0], T[1], T[2], ...
 
 urie memory: Z[0], D[0], Z[1], D[1], Z[2], D[2], ...
 
-[Most Important Invariant] At the start and end of each instruction's execution, the urie pointer must always be on Z[i] (zero cell). This constraint ensures that "unconditional jumps" can be reliably triggered at any given time.
+[Most Important Invariant] 
+
+At the start and end of each instruction's execution, the urie pointer must always be on Z[i] (zero cell). This constraint ensures that "unconditional jumps" can be reliably triggered at any given time.
 
 ② Instruction Transpilation Rules While maintaining the above invariant, the 8 Brainfuck instructions are converted one-to-one to the urie instruction sequence.
 
@@ -101,8 +101,6 @@ Case B: At the end of the loop, if the data is not 0 (return to the beginning of
 ⑤ Conclusion of the Proof
 
 Using this transpilation technique, all existing Brainfuck programs can be uniquely converted into perfectly equivalent urie programs without causing data cell misalignment or zero cell corruption. Therefore, computationally, since Brainfuck is Turing complete (assuming an infinite memory tape), it is proven that the urie that has a one-to-one correspondence with it is also strictly Turing complete.
-
-----------------End of Gemini
 
 Usage of the programs:
 
